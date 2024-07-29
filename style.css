@@ -1,0 +1,385 @@
+/*ESTILO GERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #464646;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #464646;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #252525;
+    border-color: #dcba25;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px #dcba25;
+    color: white;
+    transform: scale(1.10);
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #dcba25;
+}
+
+/*ESTILO DO CABECALHO*/
+
+header{
+    padding: 40px 4%;
+    background-color: #252525;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+}
+
+header a{
+    color: rgb(156, 154, 154);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: white;
+    transform: scale(1.10);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/*ESTILO TOPO SITE*/
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+
+.topo-do-site h1{
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #dcba25;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0;
+}
+
+
+/*ESTILO SOBRE*/
+
+section .sobre{
+    padding: 80px 4%;
+}
+
+section .sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+    padding: 20px;
+    border: 4px solid #dcba25;
+    border-radius: 10px;
+    margin: 20px
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* ESTILO DAS SKILLS*/
+
+section.skills{
+    padding: 100px 4%;
+    background-color: #313030;
+}
+
+section.skills .flex{
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #313030;
+}
+
+.skills .skills-box{
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #4b4b4b9c;
+    margin-top: 30px;
+    transition: .2s;
+}
+
+.skills .skills-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #807d7d;
+}
+
+.skills .skills-box img{
+    align-items: center;
+    padding: 5px;
+}
+
+.skills .skills-box h3{
+    font-size: 20px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.skills h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    background-color: #313030;
+}
+
+
+/*ESTILO PROJETOS*/
+
+section.projeto{
+    padding: 80px 4%;
+    box-shadow:  0 0 40px 10px #ffffff1d;
+}
+
+section.projeto .flex{
+    justify-content: space-around;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0% 100%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #050505d2;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+
+
+.projeto .btn-media button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #807d7d;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+
+}
+
+.projeto .btn-media button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #eeeded;
+}
+
+/*ESTIO DO RODAPÉ*/
+
+footer{
+    padding: 40px 0;
+    box-shadow:  0 0 40px 10px #ffffff1d;
+    background-color: #252525;
+}
+
+footer .flex{
+    flex-direction: column;
+}
+
+footer .line-footer{
+    padding: 0 0;
+    background-color: #252525;
+}
+
+footer .line-footer h1{
+    color: #fff;
+    font-size: 30px;
+}
+
+footer .logo-footer{
+    text-align: center;
+    position: relative;
+}
+
+footer .borda{
+    height: 100%;
+    border-bottom: 2px solid #dcba25;
+    border-top: 2px solid #dcba25;
+    text-align: center;
+    position: relative;
+}
+
+footer .line-footer p i{
+    color: #dcba25;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 1020px){
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 33px;
+        line-height: 35px;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    section.topo-do-site .flex{
+        gap: 30px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 23px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    section.skills{
+        padding: 40px 10%;
+    }
+    
+
+    section .sobre{
+        padding: 80px 8%;
+    
+    }
+
+
+    section.skills .flex{
+        gap: 60px;
+    }
+
+
+
+    .btn-media{
+        text-align: center;
+    }
+
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+       
+    }
+
+    section.projeto .flex{
+       gap: 60px;
+    }
+
+    footer .flex{
+        flex-direction: column;
+    }
+    
+    footer .line-footer{
+       text-align: center;
+    }
+}
