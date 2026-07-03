@@ -75,7 +75,7 @@ slides.forEach((slide, index) => {
 });
 
 function updateCarousel() {
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  track.style.transform = `translateX(-${slides[currentSlide].offsetLeft}px)`;
   currentLabel.textContent = String(currentSlide + 1).padStart(2, '0');
   progress.style.transform = `scaleX(${(currentSlide + 1) / slides.length})`;
   previousButton.disabled = currentSlide === 0;
@@ -102,7 +102,7 @@ function finishDrag() {
   carouselViewport.classList.remove('is-dragging');
   track.style.transition = '';
 
-  const threshold = Math.min(70, carouselViewport.clientWidth * .16);
+  const threshold = Math.min(45, carouselViewport.clientWidth * .09);
   if (dragOffsetX < -threshold && currentSlide < slides.length - 1) currentSlide++;
   if (dragOffsetX > threshold && currentSlide > 0) currentSlide--;
   dragOffsetX = 0;
@@ -125,11 +125,12 @@ carouselViewport.addEventListener('pointermove', event => {
   const atFirst = currentSlide === 0 && dragOffsetX > 0;
   const atLast = currentSlide === slides.length - 1 && dragOffsetX < 0;
   const resistance = atFirst || atLast ? .28 : 1;
-  track.style.transform = `translateX(calc(-${currentSlide * 100}% + ${dragOffsetX * resistance}px))`;
+  track.style.transform = `translateX(${-slides[currentSlide].offsetLeft + dragOffsetX * resistance}px)`;
 });
 
 carouselViewport.addEventListener('pointerup', finishDrag);
 carouselViewport.addEventListener('pointercancel', finishDrag);
+window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
 document.querySelector('#year').textContent = new Date().getFullYear();
