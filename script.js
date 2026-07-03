@@ -35,7 +35,11 @@ const previousButton = carousel.querySelector('.carousel-prev');
 const nextButton = carousel.querySelector('.carousel-next');
 const currentLabel = carousel.querySelector('.carousel-count strong');
 const progress = carousel.querySelector('.carousel-progress span');
+const carouselViewport = carousel.querySelector('.carousel-viewport');
 let currentSlide = 0;
+let dragStartX = 0;
+let dragOffsetX = 0;
+let isDragging = false;
 
 slides.forEach((slide, index) => {
   const url = slide.dataset.projectUrl.trim();
@@ -91,6 +95,41 @@ carousel.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft' && currentSlide > 0) { currentSlide--; updateCarousel(); }
   if (event.key === 'ArrowRight' && currentSlide < slides.length - 1) { currentSlide++; updateCarousel(); }
 });
+
+function finishDrag() {
+  if (!isDragging) return;
+  isDragging = false;
+  carouselViewport.classList.remove('is-dragging');
+  track.style.transition = '';
+
+  const threshold = Math.min(70, carouselViewport.clientWidth * .16);
+  if (dragOffsetX < -threshold && currentSlide < slides.length - 1) currentSlide++;
+  if (dragOffsetX > threshold && currentSlide > 0) currentSlide--;
+  dragOffsetX = 0;
+  updateCarousel();
+}
+
+carouselViewport.addEventListener('pointerdown', event => {
+  if (!window.matchMedia('(max-width: 700px)').matches || event.pointerType === 'mouse') return;
+  isDragging = true;
+  dragStartX = event.clientX;
+  dragOffsetX = 0;
+  track.style.transition = 'none';
+  carouselViewport.classList.add('is-dragging');
+  carouselViewport.setPointerCapture(event.pointerId);
+});
+
+carouselViewport.addEventListener('pointermove', event => {
+  if (!isDragging) return;
+  dragOffsetX = event.clientX - dragStartX;
+  const atFirst = currentSlide === 0 && dragOffsetX > 0;
+  const atLast = currentSlide === slides.length - 1 && dragOffsetX < 0;
+  const resistance = atFirst || atLast ? .28 : 1;
+  track.style.transform = `translateX(calc(-${currentSlide * 100}% + ${dragOffsetX * resistance}px))`;
+});
+
+carouselViewport.addEventListener('pointerup', finishDrag);
+carouselViewport.addEventListener('pointercancel', finishDrag);
 
 updateCarousel();
 document.querySelector('#year').textContent = new Date().getFullYear();
