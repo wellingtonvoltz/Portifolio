@@ -1,161 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Portifólio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfólio de Wellington Voltz, desenvolvedor de software e profissional de QA com foco em automação de testes.">
+  <meta name="theme-color" content="#0d0e10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <title>Wellington Voltz — Desenvolvedor &amp; QA</title>
 </head>
 <body>
-
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo-portifolio.png" alt="">
-                </a>
-            </div>
-
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#topo-do-site">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projeto">Projetos</a></li>
-                </ul>
-            </nav>
-
-            <div class="btn-contato">
-                <a href="#contato">
-                    <button>Contato</button>
-                </a>
-            </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient-light light-one" aria-hidden="true"></div>
+  <div class="ambient-light light-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início"><img src="images/logo-portifolio.png" alt="" width="46" height="46"><span>Wellington<span class="dot">.</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span></button>
+    <nav id="main-menu" class="main-nav" aria-label="Navegação principal"><a href="#sobre">Sobre</a><a href="#skills">Stack</a><a href="#projetos">Projetos</a><a class="nav-cta" href="#contato">Vamos conversar <i class="bi bi-arrow-up-right"></i></a></nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero section" id="inicio">
+      <div class="hero-copy reveal"><div class="eyebrow"><span></span> Desenvolvimento, QA &amp; Automação</div><h1>Transformo ideias em software confiável <em>— do código à qualidade.</em></h1><p class="hero-text">Olá, sou o Wellington. Sou desenvolvedor de software e, no meu trabalho atual, atuo principalmente como QA e automatizador de testes. Também contribuo com desenvolvimento e crio projetos pessoais para praticar, experimentar tecnologias e evoluir continuamente.</p><div class="hero-actions"><a class="button button-primary" href="#projetos">Conheça meu trabalho <i class="bi bi-arrow-down-right"></i></a><a class="text-link" href="https://github.com/wellingtonvoltz" target="_blank" rel="noreferrer">GitHub <i class="bi bi-arrow-up-right"></i></a></div></div>
+      <div class="hero-visual reveal"><div class="visual-orbit" aria-hidden="true"></div><img src="images/topo-portifolio.png" alt="Ilustração sobre criatividade e tecnologia"><div class="floating-card card-code"><i class="bi bi-code-slash"></i><span>Código &amp; testes<br><strong>com propósito</strong></span></div><div class="floating-card card-status"><span class="status-dot"></span> Desenvolvimento com qualidade</div></div>
+      <a class="scroll-hint" href="#sobre" aria-label="Rolar para a seção sobre"><span>SCROLL</span><i class="bi bi-arrow-down"></i></a>
+    </section>
+    <section class="about section" id="sobre">
+      <div class="section-label reveal"><span>01</span> Sobre mim</div>
+      <div class="about-grid"><div class="portrait reveal"><img src="images/foto-portifolio.png" alt="Wellington Voltz sorrindo"><span class="portrait-tag">Código com qualidade</span></div><div class="about-copy reveal"><h2>Entre desenvolvimento e qualidade, <span>enxergo o produto por inteiro.</span></h2><p class="lead">Sou desenvolvedor de software e atualmente trabalho com foco em QA e automação de testes. Essa combinação me permite tanto construir soluções quanto analisar sua confiabilidade, usabilidade e comportamento em diferentes cenários.</p><div class="about-columns"><p>No dia a dia, desenvolvo e mantenho testes automatizados com Playwright, Selenium e Cypress, valido fluxos críticos e ajudo a identificar riscos antes que cheguem ao usuário. Quando necessário, também contribuo diretamente com desenvolvimento e investigação técnica de falhas.</p><p>Fora do trabalho, continuo criando projetos pessoais para colocar ideias em prática, explorar linguagens e fortalecer minha experiência como desenvolvedor. Acredito que saber construir e testar são habilidades complementares — ambas essenciais para entregar software realmente bem-feito.</p></div><div class="values"><span><i class="bi bi-check2"></i> Desenvolvimento</span><span><i class="bi bi-check2"></i> Qualidade &amp; automação</span><span><i class="bi bi-check2"></i> Aprendizado contínuo</span></div></div></div>
+    </section>
+    <section class="skills section" id="skills">
+      <div class="section-label reveal"><span>02</span> Tecnologias</div><div class="section-heading reveal"><h2>Minha caixa de <span>ferramentas.</span></h2><p>Ferramentas de automação, desenvolvimento e dados que uso para validar fluxos, investigar falhas e construir testes sustentáveis.</p></div>
+      <div class="skill-grid reveal"><article class="skill-card qa-tool"><img src="images/logos/playwright-color.svg" alt=""><div><strong>Playwright</strong><small>Testes E2E</small></div><span>01</span></article><article class="skill-card qa-tool"><img src="images/logos/selenium-color.svg" alt=""><div><strong>Selenium</strong><small>Automação web</small></div><span>02</span></article><article class="skill-card qa-tool"><img src="images/logos/cypress-color.svg" alt=""><div><strong>Cypress</strong><small>Testes E2E</small></div><span>03</span></article><article class="skill-card"><img src="images/logos/python-color.svg" alt=""><div><strong>Python</strong><small>Automação</small></div><span>04</span></article><article class="skill-card"><img src="images/logos/javascript-color.svg" alt=""><div><strong>JavaScript</strong><small>Testes &amp; web</small></div><span>05</span></article><article class="skill-card"><img src="images/logos/java-color.svg" alt=""><div><strong>Java</strong><small>Aplicações</small></div><span>06</span></article><article class="skill-card"><img src="images/logos/mysql-color.svg" alt=""><div><strong>MySQL</strong><small>Validação de dados</small></div><span>07</span></article><article class="skill-card"><img src="images/logos/php-color.svg" alt=""><div><strong>PHP</strong><small>Back-end</small></div><span>08</span></article><article class="skill-card"><img src="images/logos/html-color.svg" alt=""><div><strong>HTML</strong><small>Estrutura</small></div><span>09</span></article><article class="skill-card"><img src="images/logos/css-color.svg" alt=""><div><strong>CSS</strong><small>Interfaces</small></div><span>10</span></article></div>
+    </section>
+    <section class="projects section" id="projetos">
+      <div class="projects-heading reveal"><div><div class="section-label"><span>03</span> Projetos selecionados</div><h2>O que já saiu <span>do papel.</span></h2></div><p>Interfaces pensadas, construídas e lapidadas com atenção aos detalhes.</p></div>
+      <div class="project-carousel reveal" role="region" aria-roledescription="carrossel" aria-label="Projetos de Wellington">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <!-- Adicione a URL publicada em data-project-url para ativar o acesso à aplicação. -->
+            <article class="project-slide" data-project-url="" aria-label="Projeto Sistema de Login">
+              <div class="project-preview"><img src="images/projetos/Captura de tela 2024-06-12 194734.png" alt="Tela inicial do sistema de login" width="1235" height="879"><div class="preview-overlay"><span>Explorar projeto</span><i class="bi bi-arrow-up-right"></i></div><span class="project-number">01</span></div>
+              <div class="project-info"><div class="project-topline"><span>Desenvolvimento web</span><span>2024</span></div><h3>Sistema de <span>Login</span></h3><p>Interface de autenticação criada para praticar organização visual e os fluxos essenciais de acesso de um usuário.</p><div class="tags"><span>HTML</span><span>CSS</span><span>UI</span></div><a class="project-live" href="#" aria-disabled="true"><span>Aplicação ainda não publicada</span><i class="bi bi-lock"></i></a></div>
+            </article>
+            <article class="project-slide" data-project-url="" aria-label="Projeto Cadastro de Usuários">
+              <div class="project-preview"><img src="images/projetos/Captura de tela 2024-06-12 195243.png" alt="Tela de cadastro de usuários" width="1439" height="887" loading="lazy"><div class="preview-overlay"><span>Explorar projeto</span><i class="bi bi-arrow-up-right"></i></div><span class="project-number">02</span></div>
+              <div class="project-info"><div class="project-topline"><span>Formulários &amp; experiência</span><span>2024</span></div><h3>Cadastro de <span>Usuários</span></h3><p>Fluxo de cadastro completo com campos organizados para tornar o preenchimento simples, direto e compreensível.</p><div class="tags"><span>Formulários</span><span>HTML</span><span>CSS</span></div><a class="project-live" href="#" aria-disabled="true"><span>Aplicação ainda não publicada</span><i class="bi bi-lock"></i></a></div>
+            </article>
+          </div>
         </div>
-    </header>
-
-    <main>
-        <section class="topo-do-site">
-            <h1 id="topo-do-site"></h1>
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>Olá, me chamo <span>Wellington!</span></h1>
-                        <p>Sou um desenvolvedor rápido e ágil, adaptável a novas tecnologias e metodologias, sempre disposto a aprender mais!</p>
-
-                        <div class="btn-contato">
-                            <a href="#contato">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="img-topo-site">
-                        <img src="images/topo-portifolio.png" alt="">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="sobre">
-            <h1 id="sobre"></h1>
-            <div class="interface">
-                <div class="flex">
-                    <div class="foto-portifolio">
-                        <img src="images/foto-portifolio.jpeg" alt="">
-                    </div>
-
-                    <div class="txt-sobre">
-                        <P>Sou apaixonado por tecnologia desde a infância, uma fascinação que começou muito cedo, quando me encantava com as possibilidades que os computadores apresentavam. Essa paixão me impulsionou a explorar o mundo da programação, onde me encontro hoje como um iniciante entusiasmado e dedicado.</P>
-                        <p>Embora ainda não tenha experiência profissional, já tive a oportunidade de adquirir valiosas habilidades através do desenvolvimento de projetos pessoais. Acredito que essa experiência prática me proporcionou uma base sólida.</p>
-                        <p>Sou uma pessoa comunicativa e receptiva a feedbacks. Acredito que a colaboração e o aprendizado contínuo são essenciais para o crescimento profissional.</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section class="skills">
-            <h1 id="skills"></h1>
-            <div class="interface">
-                <h2 class="titulo">Minhas <span>Skills</span></h2>
-                <div class="flex">
-                    <div class="skills-box">
-                        <img src="images/logos/python-logo.png" alt="">
-                        <h3>Python</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/php-logo.png" alt="">
-                        <h3>PHP</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/java-logo.png" alt="">
-                        <h3>Java</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/mysql-logo.png" alt="">
-                        <h3>MySQL</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/java-script-logo.png" alt="">
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/html.png" alt="">
-                        <h3>HTML</h3>
-                    </div>
-                    <div class="skills-box">
-                        <img src="images/logos/css.png" alt="">
-                        <h3>CSS</h3>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-        <section class="projeto">
-            <h1 id="projeto"></h1>
-            <div class="interface">
-                <h2 class="titulo">Meus <span>Projetos</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(images/projetos/Captura\ de\ tela\ 2024-06-12\ 194734.png);">
-                        <div class="overlay">Sistema de Login</div>
-                    </div>
-                    <!-- <div class="img-port" style="background-image: url();"></div>
-                    <div class="img-port" style="background-image: url();"></div> -->
-                </div>
-                <div class="btn-media">
-                    <a href="https://www.linkedin.com/in/wellington-voltz-14bba322a/"><button><i class="bi bi-linkedin"></i></button></a> <!--Linkedlin-->
-                    <a href="https://github.com/wellingtonvoltz"><button><i class="bi bi-github"></i></button></a> <!--Github-->
-                </div>
-            </div>
-        </section>
-
-
-    </main>
-
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="images/logo-portifolio.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="line-footer borda">
-                <h1>Entre em Contato</h1>
-                <h1 id="contato"></h1>
-                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:wellington_voltz@hotmail.com">wellington_voltz@hotmail.com</a></p>
-                <p><i class="bi bi-whatsapp"></i></i> <a href="https://wa.me/51995238525">(51)995238525</a></p>
-            </div>
-        </div>
-    </footer>
-    
-</body>
-</html>
+        <div class="carousel-footer"><div class="carousel-progress" aria-hidden="true"><span></span></div><div class="carousel-count" aria-live="polite"><strong>01</strong><span>/</span><span>02</span></div><div class="carousel-controls"><button class="carousel-button carousel-prev" type="button" aria-label="Projeto anterior"><i class="bi bi-arrow-left"></i></button><button class="carousel-button carousel-next" type="button" aria-label="Próximo projeto"><i class="bi bi-arrow-right"></i></button></div></div>
+      </div>
+    </section>
+    <section class="contact section" id="contato"><div class="contact-inner reveal"><div class="eyebrow"><span></span> Vamos criar algo juntos?</div><h2>Tem uma ideia ou oportunidade? <em>Quero ouvir.</em></h2><p>Estou aberto a novos projetos, conexões e oportunidades para crescer como desenvolvedor.</p><a class="contact-email" href="mailto:wellington_voltz@hotmail.com">wellington_voltz@hotmail.com <i class="bi bi-arrow-up-right"></i></a><div class="socials"><a href="https://www.linkedin.com/in/wellington-voltz-14bba322a/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a><a href="https://github.com/wellingtonvoltz" target="_blank" rel="noreferrer"><i class="bi bi-github"></i> GitHub</a><a href="https://wa.me/5551995238525" target="_blank" rel="noreferrer"><i class="bi bi-whatsapp"></i> WhatsApp</a></div></div></section>
+  </main>
+  <footer><a class="brand" href="#inicio"><img src="images/logo-portifolio.png" alt="" width="38" height="38"><span>Wellington<span class="dot">.</span></span></a><p>Projetado e desenvolvido com curiosidade — © <span id="year"></span></p><a class="back-top" href="#inicio">Voltar ao topo <i class="bi bi-arrow-up"></i></a></footer>
+  <script src="script.js"></script>
+</body></html>
